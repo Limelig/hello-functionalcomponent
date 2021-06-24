@@ -6,6 +6,7 @@ import {
   Link
 } from "react-router-dom";
 import { HelloClass } from './HelloClass/HelloClass'
+import { HelloFunction } from './HelloFunction/HelloFunction'
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
             <HelloClass />
           </Route>          
           <Route path="/hellofunctional" exact={true}>
-            함수형 컴포넌트 테스트
+            <HelloFunction />
           </Route>
         </Switch>
       </div>
