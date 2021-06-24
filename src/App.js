@@ -5,6 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { HelloClass } from './HelloClass/HelloClass'
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
             홈페이지ㅣ
           </Route>
           <Route path="/helloClass" exact={true}>
-            클래스 컴포넌트 테스트
+            <HelloClass />
           </Route>          
           <Route path="/hellofunctional" exact={true}>
             함수형 컴포넌트 테스트
