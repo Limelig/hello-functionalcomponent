@@ -11,6 +11,10 @@ export class HelloClass extends React.Component {
     console.log("Mount");
   }
 
+  componentWillUnmount() {
+    console.log("destroyer");
+  }
+
   componentDidUpdate() {
     console.log("Updated");
   }
@@ -21,13 +25,13 @@ export class HelloClass extends React.Component {
   onPlus() {
     this.setState({ number: this.state.number + 1 });
   }
-
   render() {
     return (
       <>
         <button onClick={() => this.onMinus()}>-</button>
         <div>{this.state.number}</div>
         <button onClick={() => this.onPlus()}>+</button>
+        {this.props.children}
       </>
     );
   }

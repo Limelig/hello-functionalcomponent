@@ -1,12 +1,7 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import { HelloClass } from './HelloClass/HelloClass'
-import { HelloFunction } from './HelloFunction/HelloFunction'
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HelloClass } from "./HelloClass/HelloClass";
+import { HelloFunction } from "./HelloFunction/HelloFunction";
 
 function App() {
   return (
@@ -30,14 +25,14 @@ function App() {
             홈페이지ㅣ
           </Route>
           <Route path="/helloClass" exact={true}>
-            <HelloClass />
-          </Route>          
+            <HelloClass>클래스 컴포넌트 카운터</HelloClass>
+          </Route>
           <Route path="/hellofunctional" exact={true}>
-            <HelloFunction />
+            <HelloFunction>함수형 컴포넌트 카운터</HelloFunction>
           </Route>
         </Switch>
       </div>
-      </Router>
+    </Router>
   );
 }
 
