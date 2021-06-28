@@ -5,6 +5,7 @@ import { HelloFunction } from "./HelloFunction/HelloFunction";
 import { PropsDrilling } from "./PropsDrilling/PropsDrilling";
 import { Element, HelloJsx } from "./HelloJsx/HelloJsx";
 import { ContextAPITest } from "./ContextAPITest/ContextAPITest";
+import { ContextAPITest4Class } from "./ContextAPITest4Class/ContextAPITest4Class";
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
           <li>
             <Link to="/contextapitest">Context API 확인</Link>
           </li>
+          <li>
+            <Link to="/contextapi4class">Context API for Class</Link>
+          </li>
         </ul>
       </div>
       <div>
@@ -45,6 +49,9 @@ function App() {
           </Route>
           <Route path="/contextapitest" exact={true}>
             <ContextAPITest>Context API 확인</ContextAPITest>
+          </Route>
+          <Route path="/contextapi4class" exact={true}>
+            <ContextAPITest4Class>Context API Class 확인</ContextAPITest4Class>
           </Route>
         </Switch>
       </div>
