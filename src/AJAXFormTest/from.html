@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <script>
+    var handleSubmit = function (e) {
+      var id = e.target.elements.id.value;
+      var password = e.target.elements.password.value;
+
+      if (id === "") {
+        document.getElementById("iderror").style = "display: block";
+
+        return false;
+      }
+
+      if (password === "") {
+        document.getElementById("passerror").style = "display: block";
+
+        return false;
+      }
+
+      return {
+        id: id,
+        password: password,
+      };
+    };
+
+    window.onsubmit = function (e) {
+      // 폼을 전송하는 기능을 비활성화
+      e.preventDefault();
+      var result = handleSubmit(e);
+
+      if (result !== false) {
+        alert("폼 서브밋!" + JSON.stringify(result, null, 2));
+      }
+    };
+  </script>
+  <body>
+    <form onsubmit="onsubmit">
+      <input type="text" name="id" />
+      <div id="iderror" style="display: none">아이디는 필수 값입니다.</div>
+      <input type="text" name="password" />
+      <div id="passerror" style="display: none">패스워드는 필수 값입니다.</div>
+      <button type="submit">서브밋</button>
+      <button type="reset">리셋</button>
+    </form>
+  </body>
+</html>
